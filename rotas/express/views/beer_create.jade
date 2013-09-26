@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1
+    | Minhas cervejas
+  p 
+    | Welcome to #{title}
+
+  form(method="post", action="")
+    label
+      input(type="text", name="name", placeholder="name")
+    label
+      input(type="text", name="type", placeholder="type")
+    label
+      textarea(name="description", placeholder="description")
+    input(type="submit", value="SALVAR")
+
+  if(cerveja)
+    h3
+      | Cerveja #{cerveja.name} cadastrada com sucesso!
+    p
+      | #{cerveja.name} - #{cerveja.type} - #{cerveja.description}

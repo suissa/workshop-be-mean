@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1
+    | Minhas cervejas
+  p 
+    | Welcome to #{title}
+  ul
+  for cerveja in  cervejas
+    li #{cerveja.name} - #{cerveja.type} -  
+      a(href="http://localhost:3000/beers/#{cerveja._id}") Edit

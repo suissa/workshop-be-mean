@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1
+    | Minhas cervejas
+  p 
+    | Welcome to #{title}
+  h3 #{cerveja.name} - #{cerveja.type}
+
+  form(method="post", action="")
+    input(type="hidden", name="_id", value=cerveja._id)
+    input(type="hidden", name="_method", value="delete")
+    input(type="submit", value="DELETAR")
